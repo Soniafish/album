@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Album</title>
+	<style>
+		body{
+			box-sizing: border-box;
+		}
+		/*ig-img-flex*/
+		.ig-container{
+			width: 100%;
+			max-width: 900px;
+			margin: 50px auto;
+			display: flex;
+			flex-flow: row nowrap;
+			box-sizing: border-box;}
+			.ig-container div, .ig-container a, .ig-container img{
+				box-sizing: border-box;}
+
+		.sample{
+			width: 33.3%;
+			display: flex;
+			flex-flow: row wrap;}
+
+		.sample-small{
+			width: 16.65%;}
+
+		.sample-big .big, .sample-big .small, .sample-small .small{
+			display: block;
+			padding: 5px;
+		}
+
+		.sample-big .big, .sample-small .small{
+			width: 100%;
+		}
+
+		.sample-big .small{
+			width: 50%;
+		}
+
+		img{
+			width: 100%;
+		}
+	</style>
+</head>
+<body>
+
+	<h2 style="text-align: center;">My Album</h2>
+	
+	<div class="ig-container">
+		<div class="sample sample-big">
+			<a href="" class="big">
+				<img src="images/grid-1.jpg" alt="">
+			</a>
+			<a href="" class="small">
+				<img src="images/grid-2.jpg" alt="">
+			</a>
+			<a href="" class="small">
+				<img src="images/grid-3.jpg" alt="">
+			</a>
+		</div>
+		<div class="sample sample-small">
+			<a href="" class="small">
+				<img src="images/grid-4.jpg" alt="">
+			</a>
+			<a href="" class="small">
+				<img src="images/grid-5.jpg" alt="">
+			</a>
+			<a href="" class="small">
+				<img src="images/grid-6.jpg" alt="">
+			</a>
+		</div>
+		<div class="sample sample-small">
+			<a href="" class="small">
+				<img src="images/grid-7.jpg" alt="">
+			</a>
+			<a href="" class="small">
+				<img src="images/grid-8.jpg" alt="">
+			</a>
+			<a href="" class="small">
+				<img src="images/grid-9.jpg" alt="">
+			</a>
+		</div>
+		<div class="sample sample-big">
+			<a href="" class="small">
+				<img src="images/grid-11.jpg" alt="">
+			</a>
+			<a href="" class="small">
+				<img src="images/grid-12.jpg" alt="">
+			</a>
+			<a href="" class="big">
+				<img src="images/grid-10.jpg" alt="">
+			</a>
+		</div>
+	</div>
+
+	<script src="jquery-3.1.1.min.js"></script>
+	<script>
+		//IG圖組合
+		albumChange();
+
+		setInterval(function () {
+			console.log("3秒");
+			albumChange()
+		}, 3000);
+		
+		function albumChange() {
+			$(".ig-container").css({"opacity": "0"});
+			var flexDirection = ["row", "row-reverse"];
+			var flexWrap = ["wrap", "wrap-reverse"];
+			var l = $(".sample").length;
+			for (var i = 0; i < l; i++) {
+				var fd1 = Math.random();
+				fd1 = Math.round(fd1);
+				var fd2 = Math.random();
+				fd2 = Math.round(fd2);
+				// console.log("flex-flow: " + flexDirection[fd1] + " " + flexWrap[fd2]);
+				$(".sample").eq(i).css({
+					"flex-flow": flexDirection[fd1] + " " + flexWrap[fd2]
+				});
+
+			}
+			$(".sample").eq(0).css({
+				"order": fd1
+			});
+
+			$(".ig-container").animate({ "opacity": "1"}, 800);
+		}
+	</script>
+
+</body>
+</html>
