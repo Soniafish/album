@@ -28,10 +28,22 @@
         .clearfix {
             *zoom: 1;
         }
-    
+        
+        body{
+			background: #ddd;
+		}
+		h2{
+			background: #aaa;
+			color: #fff;
+			text-align: center;
+			padding: 20px 0;
+			margin: 0;
+			letter-spacing: 5px;
+        }
+        
         .container {
             width: 100%;
-            max-width: 1400px;
+            max-width: 900px;
             margin: 20px auto;
         }
     
@@ -90,6 +102,9 @@
         }
     
         @media screen and (max-width: 1023px) {
+            .container {
+                padding: 0 5px;
+            }
             .col-6 {
                 width: 100%;
             }
@@ -98,7 +113,14 @@
                 width: 50%;
             }
         }
-    
+        @media screen and (max-width: 767px) {
+            .block-a .col-6{
+                width: 100%;
+            }
+            .block-a .col-6:nth-child(1) {
+                margin-bottom: 5px;
+            }
+        }
     
     </style>
 </head>
@@ -107,11 +129,11 @@
     <div class="container clearfix">
         <div class="col-6">
             <div class="col-12 albumBox">
-                <img src="images/1065-300x300.jpg" alt="img1">
+                <img src="images/111-300x300.jpg" alt="">
                 <div class="figcaption_wrap">
                     <figcaption>
-                        <p>後山街景</p> 
-                        <p>12/30/2011</p>
+                        <p>出發</span>
+                            <p>10/10/2017</p>
                     </figcaption>
                 </div>
             </div>
@@ -128,11 +150,11 @@
                     </div>
                 </div>
                 <div class="col-6 albumBox">
-                    <img src="images/188-300x300.jpg" alt="">
+                    <img src="images/108-300x300.jpg" alt="">
                     <div class="figcaption_wrap">
                         <figcaption>
-                            <p>屋頂的風景</p>
-                            <p>10/21/2013</p>
+                            <p>夏日假期</p>
+                            <p>07/01/2018</p>
                         </figcaption>
                     </div>
                 </div>
@@ -170,32 +192,24 @@
                     </div>
                 </div>
                 <div class="col-6 albumBox">
-                    <img src="images/111-300x300.jpg" alt="">
+                    <img src="images/1065-300x300.jpg" alt="img1">
                     <div class="figcaption_wrap">
                         <figcaption>
-                            <p>出發</span>
-                            <p>10/10/2017</p>
+                            <p>後山街景</p>
+                            <p>12/30/2011</p>
                         </figcaption>
                     </div>
-                </div>
-            </div>
-            <div class="block-a">
-                <div class="col-6">
-                    <img src="images/103-300x300.jpg" alt="img4">
-                </div>
-                <div class="col-6">
-                    <img src="images/103-300x300.jpg" alt="img5">
                 </div>
             </div>
         </div>
         <div class="col-6">
             <div class="block-a">
                 <div class="col-6 albumBox">
-                    <img src="images/108-300x300.jpg" alt="">
+                    <img src="images/188-300x300.jpg" alt="">
                     <div class="figcaption_wrap">
                         <figcaption>
-                            <p>夏日假期</p> 
-                            <p>07/01/2018</p>
+                            <p>屋頂的風景</p>
+                            <p>10/21/2013</p>
                         </figcaption>
                     </div>
                 </div>
@@ -207,14 +221,6 @@
                             <p>2/22/2019</p>
                         </figcaption>
                     </div>
-                </div>
-            </div>
-            <div class="block-a">
-                <div class="col-6">
-                    <img src="images/102-300x300.jpg" alt="img4">
-                </div>
-                <div class="col-6">
-                    <img src="images/16-300x300.jpg" alt="img5">
                 </div>
             </div>
         </div>
